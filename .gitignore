@@ -5,3 +5,4 @@ __pycache__
 dev_notes.txt
 private_new
 private_open
+secret_key.py
