@@ -3,3 +3,5 @@ geckodriver.log
 __pycache__
 *.pyc
 dev_notes.txt
+private_new
+private_open
