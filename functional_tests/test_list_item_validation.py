@@ -24,10 +24,10 @@ class ItemValidationTest(FunctionalTest):
         # And she can submit it successfully
         self.get_item_input_box().send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Buy milk')
-        
+
         # Perversely, she now decides to submit a second blank list item
         self.get_item_input_box().send_keys(Keys.ENTER)
-        
+
         # Again, the browser will not comply
         self.wait_for_row_in_list_table('1: Buy milk')
         self.wait_for(lambda: self.browser.find_elements_by_css_selector(
