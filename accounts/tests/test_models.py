@@ -19,3 +19,9 @@ class UserModelTest(TestCase):
         token1 = Token.objects.create(email='a@b.com')
         token2 = Token.objects.create(email='a@b.com')
         self.assertNotEqual(token1.uid, token2.uid)
+
+    def test_no_problem_with_auth_login(self):
+        user = User.objects.create(email='edith@example.com')
+        user.backend = ''
+        request = self.client.reuqest().wsgi_request
+        auth.login(request, user)
